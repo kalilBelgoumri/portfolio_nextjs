@@ -3,9 +3,9 @@ import Header from "./Header";
 
 const Layout = ({ children, name }) => {
   return (
-    <div>
+    <div className="flex flex-col h-screen">
       <Header name={name} />
-      <main>{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
     </div>
   );

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import Layout from "../components/Layout";
 
@@ -8,19 +8,15 @@ const Contact = () => {
   const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = (e) => {
+    // APPEL API //
+    axios.post(`/api/contactRequests`,{email,message}).then((res) => {
+      alert("Merci, vous serez recontacté d’ici peu");
+    });
     e.preventDefault();
     console.log(email);
     console.log(message);
-
-
-useEffect(() => {
-      // APPEL API //
-      axios.post(`http://localhost:3000/api/contactRequests`).then((res) => {
-        alert("Merci, vous serez recontacté d’ici peu");
-      });
-    }, [input])
-  }
-
+    console.log("message has been sended");
+  };
 
   return (
     <Layout name="Contact">
@@ -46,8 +42,13 @@ useEffect(() => {
           ></input>
         </div>
 
-        <button className="border-4 p-2" onClick={handleSubmit}>
-          Let's Go
+        <button
+          className="border-4 p-2"
+          onClick={handleSubmit}
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        >
+          Send Me Email
         </button>
       </form>
     </Layout>

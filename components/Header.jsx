@@ -8,15 +8,13 @@ const Header = ({name}) => {
         <title>{name}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <ul className="flex">
-        <li>
+      <ul className="flex text-xl text-black font-bold rounded-xl border-4 border-gray-700">
+        <li className="hover:text-red-700 transform transition-all delay-200">
           <Link href="/"> Accueil </Link>
+        </li >
+        <li className="hover:text-red-700 transform transition-all delay-200">          <Link href="/Projects"> Mes réalisations </Link>
         </li>
-        <li>
-          <Link href="/Projects"> Mes réalisations </Link>
-        </li>
-        <li>
-          <Link href="/Contact"> Me contacter </Link>
+        <li className="hover:text-red-700 transform transition-all delay-200">          <Link href="/Contact"> Me contacter </Link>
         </li>
       </ul>
     </div>
