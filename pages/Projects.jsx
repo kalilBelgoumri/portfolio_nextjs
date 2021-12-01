@@ -1,5 +1,11 @@
+import Layout from "../components/Layout";
+
 function Projects() {
-  return <div>Mes réalisations</div>
+  return (
+    <Layout>
+      <div>Mes réalisations</div>
+    </Layout>
+  );
 }
 
-export default Projects
+export default Projects;

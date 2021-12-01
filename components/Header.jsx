@@ -3,19 +3,19 @@ import Head from "next/head";
 
 const Header = ({name}) => {
   return (
-    <div className="text-gray-600  p-10 ">
+    <div className ="p-10 flex justify-center px-5">
       <Head>
         <title>{name}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <ul className="flex flex-row">
-        <li className="pl-4">
+      <ul className="flex">
+        <li>
           <Link href="/"> Accueil </Link>
         </li>
-        <li className="pl-4">
+        <li>
           <Link href="/Projects"> Mes réalisations </Link>
         </li>
-        <li className="pl-4">
+        <li>
           <Link href="/Contact"> Me contacter </Link>
         </li>
       </ul>

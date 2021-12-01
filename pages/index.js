@@ -1,14 +1,16 @@
 import Image from "next/image";
 import bio from "../assets/bio.jpg";
 import Layout from '../components/Layout';
-import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div >
       <Layout name="Home">
-      <h1> Bienvenue sur mon Portfolio </h1>
+        <div className="prez text-center">
+        <h1 className="text-5xl font-bold"> Bienvenue sur mon Portfolio </h1>
        <h1> Biographie </h1>
+        </div>
+     
       <Image src={bio} alt="My desk" layout="responsive" property='priority' />
       <p className="text-center text-gray-600 text-lg p-10">
           Logoden biniou degemer mat an penn ar bed, digalon ne levrioù ennon
